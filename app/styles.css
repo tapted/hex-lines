@@ -1,0 +1,163 @@
+/* Copyright 2013 Google Inc. All rights reserved.
+ * Use of this source code is governed by the Apache license that can be
+ * found in the LICENSE file. */
+
+/*Yeri*/
+
+body {
+	width: 1000px;
+	height: 700px;
+	margin-top:0px;
+  margin-bottom:0px;
+  margin-right:0px;
+  margin-left:0px;
+  background-color: #ffc;
+}
+
+h3 {
+	text-align: center;
+}
+
+#menu {
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	height: 700px;
+}
+
+#slides {
+	position: relative;
+	width: 1000px;
+	background: rgba(249,238,158,1);
+	transition: left 0.5s;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 1px 1px 4px #666;
+}
+
+.content {
+	vertical-align: top;
+	width: 250px;
+	padding: 15px;
+}
+
+#wild, #exploder, #destroyer, #fixed {
+	width: 20px;
+}
+
+#tab-selector {
+	position: relative;
+	width: 250px;
+	line-height: 10px;
+	text-align: center;
+}
+
+#tab-selector input {
+  display: none;
+}
+
+#tab-selector span {
+	position: relative;
+	top: 15px;
+	left: -2px;
+	width: 0;
+	height: 0;
+	border-left: 21px solid transparent;
+	border-right: 21px solid transparent;
+	border-top: 13px solid #bbb;
+}
+
+#tab-selector input[type="radio"] + span {
+	visibility: hidden;
+}
+
+#tab-selector input[type="radio"]:checked + span {
+	visibility: visible;
+}
+
+#tab-selector img {
+	width: 50px;
+}
+
+#tab-selector label {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	background: #bbb;
+	-webkit-border-radius: 5px;
+	color: teal;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#tab-selector label:hover {
+	background: #ccc;
+	border-color: #777;
+	color: #000;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	background-color: black;
+	height: 2px;
+}
+
+input[type="range"]::-webkit-menu-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	top: -1px;
+	width: 11px;
+	height: 11px;
+	-webkit-border-radius: 40px;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(50%,#abd3ee), color-stop(51%,#89c3eb), color-stop(100%,#d5ebfb));
+}
+
+#popup {
+	position: relative;
+	top: -400px;
+	left: 150px;
+	width: 400px;
+	height: 100px;
+	border: 3px inset black;
+	background: #FFFFFF;
+	text-align: top;
+	-webkit-transition: all 100ms;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: inline;
+}
+
+.orangeButton {
+	box-shadow:inset 0px 1px 0px 0px #fceaca;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ddae69), color-stop(1, #eeaf41) );
+	background-color:#ddae69;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:42px;
+	line-height:38px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ce8e28;
+}
+.orangeButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #eeaf41), color-stop(1, #ddae69) );
+	background-color:#eeaf41;
+}
+.orangeButton:active {
+	position:relative;
+	top:1px;
+}

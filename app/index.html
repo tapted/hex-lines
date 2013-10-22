@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hex Lines</title>
+  <link href="styles.css" rel="stylesheet" type="txt/css" />
+</head>
+<body>
+  <canvas id="myCanvas" width="640px" height="700px"
+    style="border: 1px solid #c000000; position:absolute; left:0px; top:0px; z-index:1">
+  </canvas>
+  <canvas class="hide" id="popup"
+    style="position:absolute; left:116px; top:290px; z-index:2"></canvas>
+  <input class="orangeButton" type="button" value="New Game" id="startNewGame"
+    style="position:absolute; width: width:106px; left:450px; top:630px; z-index:3"/>
+  <input class="orangeButton" type="button" value="Options >" id="toggleOptions"
+    style="position:absolute; width: width:106px; left:550px; top:630px; z-index:3"/>
+  <div id="menu"
+    style="position:absolute; left:390px; top:0px; z-index:0; transition: left 1s ease 0.05s; clip:rect(0px,250px,700px,0px);">
+
+    <table id="tab-selector"><tr>
+      <td>
+        <label for="instruction"><img src="Assets/instruction.png" title="How to Play"></label>
+        <input type="radio" name="menu" id="instruction" checked />
+        <span></span>
+      </td><td>
+        <label for="pointSystem"><img src="Assets/pointSystem.png" title="Getting Points"></label>
+        <input type="radio" name="menu" id="pointSystem" />
+        <span></span>
+      </td><td>
+        <label for="localRanking"><img src="Assets/ranking.png" title="High Scores"></label>
+        <input type="radio" name="menu" id="localRanking" />
+        <span></span>
+      </td><td>
+        <label for="setting"><img src="Assets/setting.png" title="Settings"></label>
+        <input type="radio" name="menu" id="setting" />
+        <span></span>
+      </td>
+    </tr></table>
+
+    <table id="slides"><tr>
+      <td class="content" id="slide1">
+        <h3><b>How to Play</b></h3>
+        <p>
+          Move orbs to form a line of five of the same color. The path the orb takes must be clear.
+        </p>
+        <table>
+          <tr><td width="20px" border="0">
+          <!-- Use Wild2.svg to workaround http://crbug.com/227481 -->
+            <img id="wild" src="Assets/Wild2.svg" />
+          </td><td>
+            <b>Wilds</b> match any orb.
+          </td></tr>
+          <tr>
+            <td><img id="exploder" src="Assets/BlueExploder.png" /></td>
+            <td><b>Exploders</b> cause adjacent orbs to disappear when matched with their color.</td>
+          </tr><tr>
+            <td><img id="destroyer" src="Assets/BlueDestroyer.png" /></td>
+            <td><b>Destroyers</b> cause all orbs of that color to disappear.</td>
+          </tr><tr>
+            <td><img id="fixed" src="Assets/BlueFixed.png" /></td>
+            <td><b>Fixed Orbs</b> can not be moved, but you can make a line around them.</td>
+          </tr>
+        </table>
+        <ul>
+      </td>
+
+      <td class="content" id="slide2">
+        <h3>Point System</h3>
+        <p><b>Removing orbs</b> awards points per line, increasing with difficulty. 5 on easy, 10 on medium, and 20 on hard.</p>
+        <p><b>Bonus points</b> are awarded for removing multiple lines at once (50 per extra line), or removing extra orbs in a line (5 per extra orb).</p>
+        <p><b>Multipliers</b> apply when removing consecutive lines.</p>
+      </td>
+      <td class="content" id="slide3">
+        <h3>High Scores</h3> <br>
+        <p id="1"></p> <br>
+        <p id="2"></p> <br>
+        <p id="3"></p> <br>
+        <p id="4"></p> <br>
+        <p id="5"></p> <br>
+        <p id="6"></p> <br>
+        <p id="7"></p> <br>
+        <p id="8"></p> <br>
+        <p id="9"></p> <br>
+        <p id="10"></p>
+        <p style="text-align: center">
+          <input type="button" value="Reset High Scores" id="resetScore" />
+        </p>
+      </td>
+      <td class="content" id="slide4">
+        <h3>Settings</h3>
+        <p>Difficulty:</p>
+        <p>Easy <input type="range" min="0" max="2" id="difficulty" value="0" />  Hard</p>
+        <p>Add
+          <input type="number" name="NumColors" min="0" max="6" value="0"
+            id="numColor" /> more colors
+          <input type="button" value="Apply now" id="applyColorNow" /></p>
+        <p>Animation:</p>
+        <p>On <input type="Range" min="0" max="1" value="0" id="animEffect" /> Off </p>
+        <p>Animation Speed: </p>
+        <p>Slow <input type="Range" min="0" max="2" value="1" id="animSpeed" /> Fast </p>
+      </td>
+    </tr></table>
+  </article>
+  <script type="text/javascript" src="bundle.js"></script>
+<!--
+  <script type = "text/javascript" src = "globals.js"></script>
+  <script type = "text/javascript" src = "hex.js"></script>
+  <script type = "text/javascript" src = "grid.js"></script>
+  <script type = "text/javascript" src = "orb.js"></script>
+  <script type = "text/javascript" src = "board.js"></script>
+  <script type = "text/javascript" src = "game.js"></script>
+  <script type = "text/javascript" src = "path.js"></script>
+  <script type = "text/javascript" src = "score.js"></script>
+  <script type = "text/javascript" src = "removeOrb.js"></script>
+  <script type = "text/javascript" src = "anim.js"></script>
+  <script type = "text/javascript" src = "level.js"></script>
+  <script type = "text/javascript" src = "controlGame.js"></script>
+  <script type = "text/javascript" src = "main.js"></script>
+-->
+</body>
+</html>
